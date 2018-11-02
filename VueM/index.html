@@ -9,8 +9,8 @@
 </head>
 <body>
     <div id="app">
-        <div m-html='a' m-on:click='handleClick'>hello a</div>
-        <div m-model='b'>hello b</div>
+        <div m-on:click='handleClick'>{{a}}</div>
+        <input type="text" m-model='text'>
         <div m-on:click="handleClick">hello click</div>
     </div>
 </body>
