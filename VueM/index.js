@@ -51,7 +51,6 @@
                 if(value === newValue || (newValue!== newValue&& value !== value)){
                     return
                 }
-                console.log(`newValue is ${newValue}`)
                 value = newValue;
                 dep.notify()
             }
@@ -71,7 +70,6 @@
         }
         notify(){//通知订阅者更新
             Dep.subs.forEach(sub => {
-                console.log(sub)
                 sub.update();
             })
         }
@@ -95,7 +93,6 @@
         }
         run(){
             let newValue = this.get();
-            console.log(newValue)
             let value = this.value;
             if(newValue === value){
                 return
@@ -207,7 +204,6 @@
             let val = this._getVmVal(vm,exp);
             node.addEventListener('input',(e)=>{
                 let newVal = e.target.value; 
-                console.log(newVal)
                 this.$elm =  node
                 if(val === newVal){
                     return 

@@ -1,0 +1,87 @@
+html,body{
+    height: 100%;
+    background-color: #bee2e0;
+}
+#container{
+    width: 60%;
+    margin: 0 auto ;
+    background-color: #fff;
+}
+
+/* header 部分 */
+.header-content{
+    position: relative;
+    top: -70px;
+    display: flex; 
+    margin: 0 20px;
+    height: 140px;
+    background-color: #f3f2f7;
+    margin-bottom: -50px;
+}
+.header-top{
+    height: 140px;
+    padding-left: 30px;
+    background-color: #3f4f69;
+    line-height: 80px;
+    color: #fff;
+    font-size: 30px;
+}
+.name{
+    padding: 0 20px;
+    line-height: 140px;
+    font-size:40px;
+}
+.detail-box{
+    padding: 0 30px ;
+    margin: auto 0;
+    flex:1;
+    display: flex;
+    font-size: 20px;
+    line-height: 40px;
+}
+.col{
+    flex: 1
+}
+.header-photo{
+    position: relative;
+    border: 3px solid #fff;
+    top: -43px;
+}
+.header-photo img{
+    height: 180px;
+    width: 180px;
+}
+
+/* main区域 */
+#main{
+    position: relative;
+    background-color: #f3f2f7;
+    margin: 0 20px;
+    padding: 0 20px;
+}
+.item{
+    padding-top: 20px;
+    font-size: 28px;
+    line-height: 40px;
+}
+.title{
+    border-bottom: 2px solid #3f4f69;
+}
+.item-detail{
+    margin: 0 15px;
+    font-size: 18px;
+    display: flex; 
+    flex-direction: column;  
+}
+.item-detail li{
+    list-style: none;
+}
+
+
+/* iconFont  */
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
