@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.sayHello = function(){
+            console.log('hello Person');
+        }
+        console.log(Person.prototype);
+
+        let yw = new Person('yw',20);
+        console.log(yw);
+
+        function Student(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        Student.prototype = new Person();
+        Student.prototype.sayHello = function(){
+            console.log('hello Student')
+        }
+        let yyx = new Student('yyx',20);
+        yyx.sayHello()           
+        console.log(yyx)
+
+    </script>
+</body>
+</html>
