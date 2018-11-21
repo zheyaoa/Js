@@ -3,7 +3,7 @@ let unique = (str) => {
     let strs = [...str];
     for(var i = 0;i<strs.length; i++){
         if(chars[strs[i]-'a'] == undefined){ 
-            chars[strs[i]-'a'] = 1;
+            chars[strs[i]-'a'] =  1;
         }else {
             return false;
         }
