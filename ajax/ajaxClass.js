@@ -71,7 +71,3 @@ class Ajax{
     }
 
 }
-
-window.onload = function(){
-    Ajax.get('https://www.easy-mock.com/mock/5bc8276c6370ce7431ecbf43/SignInSystem/selectEnterprises')
-}
