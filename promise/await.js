@@ -1,0 +1,29 @@
+async function async1() {
+    console.log('async1 start');
+    await async2();
+    await console.log('async1 end');
+    await console.log('async1 end end')
+  }
+
+  async function async2() {
+    console.log('async2');
+  }
+
+
+  setTimeout(function () {
+    console.log('setTimeout');
+  }, 0);
+
+  async1();
+
+  console.log('script start');
+
+
+  new Promise(function (resolve) {
+    console.log('promise1');
+    resolve();
+  }).then(function () {
+    console.log('promise2');
+  });
+
+  console.log('script end');

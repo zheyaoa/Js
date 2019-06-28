@@ -9,7 +9,8 @@
 <body>
     <script>
         var xhr = new XMLHttpRequest();
-        xhr.open('PUT','http://localhost:8888');
+        xhr.open('GET','http://localhost:8080/api/getData');
+        xhr.setRequestHeader("Content-type","application/json;charset=utf-8")
         xhr.onreadystatechange = function(){
             if(xhr.readyState == 4 && xhr.status == 200){
                 console.log(xhr.responseText);
