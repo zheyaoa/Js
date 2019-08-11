@@ -1,37 +1,39 @@
-function Set(args=[]){
-    this._o = {};
-    this.size = 0;
-    try{
-        for(let key of args){
-            this.add(key);
-        }
-    }catch{
-        throw new Error("args need be a Iterator")
-    }
-}
-Set.prototype.add = function(value){
-    let key = typeof(value)+value;
-    if(!this._o[key]){
-        this._o[key] = value;
-        this.size++;
-    }
-    return this;
-}
-Set.prototype.has = function(value){
-    let key = typeof(value)+value;
-    return this._o[key] != undefined;
-}
-Set.prototype.remove = function(value){
-    let key = typeof(value)+value;
-    delete this._o[key]
-}
-Set.prototype.clear = function(){
-    this._o = {};
-    this.size = 0;
-}
-Set.prototype.size = function(){
-    return Object.keys(this._o).length;
-}
+    function Set(data){
+        this._values = [];
+        this.size = 0;
 
-const set = new Set('abcd');
-console.log(set);
+        if(data){
+            try{
+                for(let item of data){
+                    this.add(item)
+                }
+            }catch{
+                throw('not a iterable')
+            }
+        }
+    }
+    Set.prototype.add = function(item){
+        if(!this.has(item)){
+            this._values.push(item)
+            this.size ++ 
+        }
+        return this
+    }
+    Set.prototype.has = function(item){
+        return this._values.includes(item)
+    }
+    Set.prototype.delete = function(item){
+        if(!this.has(item)){
+            return false
+        }
+        try{
+            this._values.splice(this._values.indexOf(item),1)
+            this.size--
+        }catch(e){
+            return false
+        }
+    }
+    Set.prototype.clear = function(){
+        this.size = 0
+        this._values = []
+    }
